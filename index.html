@@ -1,0 +1,169 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="p-5">
+        <nav class="navbar navbar-expand-lg navbar-light  ">
+            <div class="container">
+                <a class="d-flex justify-content-center align-items-center text-decoration-none" href="/">
+                    <img src="https://routeweather.netlify.app/images/logo@2x.png" alt="" class="logo" width="70" height="40">
+                    <div class="px-3" >
+                        <h1 class=" nav-title ">Weather</h1>
+                        <small class="nav-description">tagline goes here</small>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Live cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <div class="main-cover">
+        <div class="container">
+            <form class="find-location d-flex justify-content-center align-items-center py-5 position-relative">
+                <input class="w-100 rounded-pill p-3"  type="text" placeholder="Find your location..." id="search">
+                <button class="bttn" id="submit">Find</button>
+            </form>
+        </div>
+        <div class="container">
+            <div class="table">
+                <div class="row m-2 ">
+                    <div id="day-one" class="col-md-4 ">
+                        <div class="inner bg-transparent p-0">
+                            <div class="title-part d-flex justify-content-between">
+                                <div class="day"></div>
+                                <div class="date"></div>
+                            </div>
+                            <div class="content">
+                                <div class="location"></div>
+                                <div class="degree d-flex justify-content-between align-items-center flex-wrap">
+                                    <div class="num"><sup>o</sup>C</div>
+                                    <div class="icon ">
+                                        <img src="" alt="" width="100">
+                                    </div>
+                                </div>
+                                <div id="custom" class="custom"></div>
+                                <div class="info d-flex justify-content-between">
+                                    <span><img src="images/icon-umberella.png" alt=""> 20%</span>
+                                    <span><img src="images/icon-wind.png" alt=""> 18km/h</span>
+                                    <span><img src="images/icon-compass.png" alt=""> East</span>
+                                    <span>
+                                        <img src="" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="day-two" class="col-md-4 text-center">
+                        <div class="inner bg-transparent p-0">
+                            <div class="title-part d-flex justify-content-center">
+                                <div class="day2"></div>
+                            </div>
+                            <div class="content pt-3">
+                                <div class="degree">
+                                    <div class="icon2">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="max-num"><sup>o</sup>C</div>
+                                    <div class="min-num"><sup>o</sup>C</div>
+                                </div>
+                                <div id="custom2" class="custom"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="day-three" class="col-md-4 text-center">
+                        <div class="inner bg-transparent p-0">
+                            <div class="title-part d-flex justify-content-center">
+                                <div class="day3"></div>
+                            </div>
+                            <div class="content pt-3">
+                                <div class="degree">
+                                    <div class="icon3">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="max-num3"><sup>o</sup>C</div>
+                                    <div class="min-num"><sup>o</sup>C</div>
+                                </div>
+                                <div id="custom3" class="custom"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer class="position-absolute bottom-0 start-0 end-0">
+        <div class="container">
+        <div class="row ">
+            <div class="col-lg-8 col-md-12 mb-0 pb-0">
+                <form class="find-location d-flex justify-content-center align-items-center pt-5 position-relative">
+                    <input class="w-100 rounded-pill p-3"  type="text" placeholder="Enter your email to subscribe..." id="search">
+                    <button class="bttn btn2">Subscribe</button>
+                </form>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-0 pb-0">
+                <div class="contact-social-icons d-flex  gap-2 pt-5 ">
+                    <div class="facebook ">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                    <div class="instgram">
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                    <div class="twitter">
+                        <i class="fa-brands fa-google-plus"></i>
+                    </div>
+                    <div class="linkedin">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container">
+        <p class="colophon">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+    </div>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
